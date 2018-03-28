@@ -32,6 +32,9 @@ musl_url="git://git.musl-libc.org/musl"
 wmutils_version="master"
 wmutils_url="https://github.com/wmutils/core"
 
+piavpn_ver="v78"
+piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
+
 tbb_version="7.5.2"
 case $arch in
 	amd64) aa="64";;

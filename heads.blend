@@ -45,7 +45,7 @@ blend_postinst() {
 
 	notice "executing $blend_name postinst"
 
-	nopackage=(tomb tbb ttdnsd wmutils)
+	nopackage=(tomb tbb ttdnsd wmutils piavpn)
 	for app in $nopackage; do
 		blend_install_${app} || zerr
 	done || zerr
@@ -331,6 +331,34 @@ cd ..
 rm -rf wmutils
 EOF
 	chroot-script install-wmutils || zerr
+}
+## }}}
+## {{{ blend_install_piavpn()
+blend_install_piavpn() {
+	fn blend_install_piavpn
+	req=(strapdir piavpn_ver piavpn_url)
+	ckreq || return 1
+
+	notice "installing piavpn in $strapdir"
+
+	cat <<EOF | sudo tee ${strapdir}/install-piavpn >/dev/null
+#!/bin/sh
+echo "luther ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers.d/piavpninstall
+
+cat << _EOF > /home/luther/piainst
+#!/bin/sh
+cd /home/luther
+wget ${piavpn_url} || exit 1
+tar xf $(basename ${piavpn_url})
+./pia-${piavpn_ver}-installer-linux.sh
+_EOF
+chmod +x /home/luther/piainst
+sudo -u luther /home/luther/piainst
+
+rm -f /home/luther/pia-${piavpn_ver}-installer-*
+rm -f /etc/sudoers.d/piavpninstall
+EOF
+	chroot-script -d install-piavpn || zerr
 }
 ## }}}
 ## {{{ blend_install_musl()
