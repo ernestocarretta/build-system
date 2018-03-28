@@ -10,7 +10,7 @@ TAR_STAGE4=true
 kernel_heads_version="4.15.13"
 kernel_heads_url="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${kernel_heads_ver}.tar.xz"
 
-rootfs_overlay="https://github.com/headslive/rootfs-overlay"
+rootfs_overlay="https://github.com/CypherpunkArmory/rootfs-overlay"
 
 torsocks_version="master"
 torsocks_url="https://git.torproject.org/torsocks.git"
