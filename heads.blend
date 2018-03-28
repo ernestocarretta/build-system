@@ -82,7 +82,7 @@ build_kernel_${arch}() {
 	sudo mkdir -p "$strapdir/usr/src"
 	sudo wget -O "$strapdir/usr/src/$(basename ${kernel_heads_url})" "${kernel_heads_url}" || zerr
 	notice "extracting the linux sources"
-	pushd "$strapdir"
+	pushd "$strapdir/usr/src"
 	sudo tar xf "$(basename ${kernel_heads_url})" || zerr
 	sudo rm -f "$(basename ${kernel_heads_url})"
 	sudo cp "$R/../extra/heads-$arch.config" "$(basename -s .tar.xz ${kernel_heads_url})/.config"
@@ -153,7 +153,7 @@ cd /
 tar czf kernel-${arch}.tgz /boot /lib/modules /usr/src/linux-headers-*
 EOF
 	chroot-script -d install-linux-heads || zerr
-	mv "$strapdir/kernel-$arch" "$R/tmp/"
+	mv "$strapdir/kernel-$arch.tgz" "$R/tmp/"
 }
 
 ##{{{ iso_prepare_strap()
