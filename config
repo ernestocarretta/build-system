@@ -31,9 +31,10 @@ wmutils_version="master"
 wmutils_url="https://github.com/wmutils/core"
 
 piavpn_ver="v78"
-piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
+#piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
+piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
 
-tbb_version="7.5.2"
+tbb_version="7.5.3"
 case $arch in
 	amd64) aa="64";;
 	i386)  aa="32";;
@@ -41,6 +42,7 @@ esac
 tbb_url="https://www.torproject.org/dist/torbrowser/${tbb_version}/tor-browser-linux${aa}-${tbb_version}_en-US.tar.xz"
 
 extra_packages=(
+	firmware-linux
 	xserver-xorg
 	xserver-xorg-legacy
 	xinit
@@ -48,12 +50,10 @@ extra_packages=(
 	eudev
 	yad
 	pinentry-gtk2
-	awesome
 	openbox
 	lxpanel
 	lximage-qt
 	adwaita-icon-theme
-	breeze-cursor-theme
 	breeze-gtk-theme
 	nitrogen
 
@@ -76,12 +76,13 @@ extra_packages=(
 	lm-sensors
 	lsof
 	strace
+	fdisk
 	acl
 	gradm2
 
 	gnupg2
 	dirmngr
-	gpa
+	seahorse
 	pcsc-tools
 	htop
 	p7zip
@@ -106,10 +107,10 @@ extra_packages=(
 	lxterminal
 	lxmusic
 	leafpad
-	abiword
-	abiword-plugin-grammar
-	gnumeric
-	zathura
+	libreoffice-writer
+	libreoffice-calc
+	unrar
+	evince
 	gtkhash
 	rng-tools
 	hexchat
@@ -124,8 +125,12 @@ extra_packages=(
 	thunderbird
 	enigmail
 	electrum
+	keepassx
 	pass
-	qtpass
+	inkscape
+	audacity
+	simple-scan
+	gdebi
 	sacc
 	mpv
 	smplayer
@@ -153,6 +158,12 @@ extra_packages=(
 	xarchiver
 	#onionshare
 	udiskie
+
+	# pia vpn deps
+	libxss1
+	libappindicator1
+	gconf2
+	net-tools
 
 	gnuchess
 	gnuchess-book
@@ -194,21 +205,11 @@ finalize_purge_packages=(
 	cups-pk-helper
 	debhelper
 	easy-rsa
-	#elogind
-	evince
-	evince-common
-	gnome-keyring
 	geoclue-2.0
 	gir1.2-polkit-1.0
-	gstreamer1.0-plugins-base
-	gstreamer1.0-plugins-good
-	gstreamer1.0-pulseaudio
-	gstreamer1.0-x
-	#gvfs
 	kwayland-data
 	kwayland-integration
 	lxqt-policykit
-	minisat
 	modemmanager
 	ntp
 	opensc
@@ -229,5 +230,7 @@ finalize_purge_packages=(
 	ttdnsd-dbgsym
 	upower
 	usb-modeswitch
-	yelp
+	qdbus
+	qt-at-spi
+	scour
 )
