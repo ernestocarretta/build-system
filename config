@@ -50,6 +50,8 @@ extra_packages=(
 	grub-efi-ia32-bin
 	xserver-xorg
 	xserver-xorg-legacy
+	xserver-xorg-input-synaptics
+	xserver-xorg-input-libinput
 	xinit
 	openrc
 	eudev
@@ -61,6 +63,7 @@ extra_packages=(
 	adwaita-icon-theme
 	breeze-gtk-theme
 	nitrogen
+	laptop-detect
 
 	alsa-utils
 
@@ -97,6 +100,7 @@ extra_packages=(
 	reaver
 	steghide
 	qrencode
+	firefox-esr
 
 	tor
 	nyx
@@ -136,6 +140,7 @@ extra_packages=(
 	audacity
 	simple-scan
 	gdebi
+	synaptic
 	sacc
 	mpv
 	smplayer
