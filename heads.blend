@@ -61,6 +61,10 @@ blend_postinst() {
 	sudo mv -v   rootfs-overlay/.git . || zerr
 	sudo cp -rv  rootfs-overlay/* .    || zerr
 	sudo rm -rf  rootfs-overlay
+
+	notice "cloning linux-firmware"
+	sudo rm -rf lib/firmware
+	sudo git clone --depth 1 ${firmware_url} lib/firmware || zerr
 	popd
 
 	blend_fixpax   || zerr
