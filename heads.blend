@@ -45,7 +45,7 @@ blend_postinst() {
 
 	notice "executing $blend_name postinst"
 
-	[ -n "$mkefi"] && {
+	[[ -n "$mkefi" ]] && {
 		iso_make_efi
 		iso_write_grub_cfg
 	}
