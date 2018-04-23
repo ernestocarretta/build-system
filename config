@@ -61,7 +61,6 @@ extra_packages=(
 	breeze-gtk-theme
 	nitrogen
 	laptop-detect
-	xbacklight
 
 	alsa-utils
 
