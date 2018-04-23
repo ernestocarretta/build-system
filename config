@@ -26,17 +26,14 @@ gtomb_url="https://git.parazyd.org/gtomb"
 ttdnsd_version="master"
 ttdnsd_url="https://git.torproject.org/ioerror/ttdnsd.git"
 
-musl_version="v1.1.19"
-musl_url="git://git.musl-libc.org/musl"
-
 firmware_url="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 
 wmutils_version="master"
 wmutils_url="https://github.com/wmutils/core"
 
-piavpn_ver="v78"
-#piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
-piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
+piavpn_ver="v79"
+piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
+#piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
 
 tbb_version="7.5.3"
 case $arch in
@@ -144,7 +141,7 @@ extra_packages=(
 	synaptic
 	sacc
 	mpv
-	smplayer
+	gnome-mpv
 	youtube-dl
 	tig
 	imagemagick
