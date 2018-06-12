@@ -9,7 +9,7 @@ TAR_STAGE4=true
 mkefi="yes"
 efi_work="$R/efi-files"
 
-kernel_heads_version="4.15.18"
+kernel_heads_version="4.17.1"
 kernel_heads_url="https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${kernel_heads_version}.tar.xz"
 
 rootfs_overlay="https://github.com/CypherpunkArmory/rootfs-overlay"
@@ -35,7 +35,7 @@ piavpn_ver="v79"
 piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
 #piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
 
-tbb_version="7.5.3"
+tbb_version="7.5.5"
 case $arch in
 	amd64) aa="64";;
 	i386)  aa="32";;
