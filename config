@@ -35,7 +35,7 @@ piavpn_ver="v79"
 piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
 #piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
 
-tbb_version="7.5.6"
+tbb_version="8.0"
 case $arch in
 	amd64) aa="64";;
 	i386)  aa="32";;
