@@ -223,7 +223,6 @@ finalize_purge_packages=(
 	lxqt-policykit
 	lxqt-policykit-l10n
 	modemmanager
-	ntp
 	opensc
 	papirus-icon-theme
 	packagekit
