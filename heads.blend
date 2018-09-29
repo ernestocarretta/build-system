@@ -233,14 +233,14 @@ menu rows 4
 menu tabmsg Press ENTER to boot or TAB to edit a menu entry
 
 label live-${arch}
-	menu label PrivateKey ${arch} (PIA VPN)
-	linux /live/vmlinuz
-	append initrd=/live/initramfs.cpio.gz verbose net.ifnames=0 dopia 
-
-label live-${arch}
 	menu label PrivateKey ${arch} (Tor)
 	linux /live/vmlinuz
 	append initrd=/live/initramfs.cpio.gz verbose net.ifnames=0 dotor 
+
+label live-${arch}
+	menu label PrivateKey ${arch} (PIA VPN)
+	linux /live/vmlinuz
+	append initrd=/live/initramfs.cpio.gz verbose net.ifnames=0 dopia 
 
 endtext
 EOF
@@ -696,15 +696,15 @@ set menu_color_normal=white/black
 set menu_color_highlight=dark-gray/white
 set timeout=6
 
-menuentry "PrivateKey ${arch} (PIA VPN)" {
-	set gfxpayload=keep
-	linux  /live/vmlinuz verbose net.ifnames=0 dopia
-	initrd /live/initramfs.cpio.gz
-}
-
 menuentry "PrivateKey ${arch} (Tor)" {
 	set gfxpayload=keep
 	linux  /live/vmlinuz verbose net.ifnames=0 dotor
+	initrd /live/initramfs.cpio.gz
+}
+
+menuentry "PrivateKey ${arch} (PIA VPN)" {
+	set gfxpayload=keep
+	linux  /live/vmlinuz verbose net.ifnames=0 dopia
 	initrd /live/initramfs.cpio.gz
 }
 EOF
