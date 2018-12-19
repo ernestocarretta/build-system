@@ -134,7 +134,7 @@ extra_packages=(
 	gimp
 	thunderbird
 	enigmail
-	electrum
+	
 	keepassx
 	pass
 	inkscape
