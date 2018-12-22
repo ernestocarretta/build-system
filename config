@@ -24,7 +24,7 @@ gtomb_version="master"
 gtomb_url="https://git.parazyd.org/gtomb"
 
 ttdnsd_version="master"
-ttdnsd_url="https://gitweb.torproject.org/user/ioerror/ttdnsd.git"
+ttdnsd_url="https://github.com/pparent76/ttdnsd"
 
 firmware_url="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 
