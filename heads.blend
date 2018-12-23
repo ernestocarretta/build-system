@@ -349,7 +349,7 @@ blend_install_wmutils() {
 	cat <<EOF | sudo tee ${strapdir}/install-wmutils >/dev/null
 #!/bin/sh
 cd /root/wmutils
-git checkout ${tomb_version}
+git checkout
 make
 make install
 cd ..
