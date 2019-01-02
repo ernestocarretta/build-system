@@ -60,7 +60,7 @@ extra_packages=(
 	lxpanel
 	lximage-qt
 	adwaita-icon-theme
-	breeze-gtk-theme
+	bluebird-gtk-theme
 	nitrogen
 	laptop-detect
 
@@ -85,7 +85,7 @@ extra_packages=(
 	lm-sensors
 	lsof
 	strace
-	fdisk
+	gdisk
 	acl
 	gradm2
 
@@ -104,7 +104,6 @@ extra_packages=(
 	firefox-esr
 
 	tor
-	nyx
 	apt-transport-tor
 	apt-transport-https
 	tsocks
@@ -197,7 +196,7 @@ extra_packages=(
 	libx11-xcb-dev
 	libxcb-util0-dev
 	libelf-dev
-	gcc-7-plugin-dev
+	gcc-6-plugin-dev
 	equivs
 	debhelper
 )
