@@ -104,6 +104,7 @@ extra_packages=(
 	firefox-esr
 
 	tor
+	tor-arm
 	apt-transport-tor
 	apt-transport-https
 	tsocks

@@ -100,7 +100,6 @@ build_kernel_${arch}() {
 	cat <<EOF | sudo tee ${strapdir}/install-linux-heads >/dev/null
 #!/bin/sh
 cd /usr/src/$(basename -s .tar.xz ${kernel_heads_url})
-apt install --yes --no-install-recommends build-essential flex bison libelf-dev bc libssl-dev
 make oldconfig       || exit 1
 make ${MAKEOPTS}     || exit 1
 make INSTALL_MOD_STRIP=1 modules_install || exit 1
@@ -437,7 +436,6 @@ blend_install_ttdnsd() {
 	cat <<EOF | sudo tee ${strapdir}/install-ttdnsd >/dev/null
 #!/bin/sh
 cd /root/ttdnsd/ttdnsd
-apt install --yes --no-install-recommends debhelper tsocks
 dpkg-buildpackage || return 1
 cd ..
 dpkg -i *.deb || return 1
