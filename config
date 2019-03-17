@@ -24,7 +24,7 @@ gtomb_version="master"
 gtomb_url="https://git.parazyd.org/gtomb"
 
 ttdnsd_version="master"
-ttdnsd_url="https://github.com/headslive/ttdnsd"
+ttdnsd_url="https://github.com/pparent76/ttdnsd"
 
 firmware_url="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 
@@ -35,7 +35,7 @@ piavpn_ver="v78"
 #piavpn_url="https://installers.privateinternetaccess.com/download/pia-${piavpn_ver}-installer-linux.tar.gz"
 piavpn_url="https://privateinternetaccess-storage.s3.amazonaws.com/pub/installers/pia-${piavpn_ver}-dev-linux-installer-skip-flags-4161fda-installer-linux.tar.gz"
 
-tbb_version="8.0.4"
+tbb_version="8.0.6"
 case $arch in
 	amd64) aa="64";;
 	i386)  aa="32";;
